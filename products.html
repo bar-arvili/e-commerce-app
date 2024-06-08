@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Manage Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-menu">
+        <button id="signOutButton">Sign Out</button>
+        <button onclick="document.getElementById('productForm').style.display='block';">Add Product</button>
+    </div>
+    <h1>Manage Products</h1>
+    <div id="productForm" style="display:none;">
+        <div class="input-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" placeholder="Product Name">
+        </div>
+        <div class="input-group">
+            <label for="productPrice">Product Price</label>
+            <input type="number" id="productPrice" placeholder="Product Price">
+        </div>
+        <div class="input-group">
+            <label for="productDescription">Product Description</label>
+            <textarea id="productDescription" placeholder="Product Description"></textarea>
+        </div>
+        <div class="input-group">
+            <label for="productImageUrl">Product Image URL</label>
+            <input type="text" id="productImageUrl" placeholder="Product Image URL">
+        </div>
+        <button type="button" id="addProductBtn">Add Product</button>
+    </div>
+    <div id="productsTableContainer">
+        <table id="productsTable">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="productsContainer"></tbody>
+        </table>
+    </div>
+    <script defer type="module" src="products.js"></script>
+</body>
+</html>
